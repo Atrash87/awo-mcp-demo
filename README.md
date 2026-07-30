@@ -76,29 +76,57 @@ pip install -r requirements.txt
 
 ## Running the MCP Server
 
+Open a terminal in the project directory and activate the Conda environment.
+
 ```bash
+conda activate awo-mcp
 python server.py
 ```
 
-The server starts and waits for incoming MCP requests.
+The server will start and wait for incoming MCP requests. This is expected behavior. Leave this terminal open while testing.
 
 ---
 
 ## Running the Demo Client
 
+Open a **second terminal** in the same project directory.
+
+Activate the Conda environment again.
+
 ```bash
+conda activate awo-mcp
 python client.py
 ```
+
+The interactive menu will appear:
+
+```text
+==============================
+      AWO MCP Demo
+==============================
+1. Count facilities
+2. Search by city
+3. Search by service
+0. Exit
+```
+
+Choose an option and enter the requested information. The client will communicate with the MCP server and display the returned results.
 
 ---
 
 ## Claude Desktop Integration
 
-Install Claude Desktop:
+Instead of using the demo client, you can connect the MCP server directly to Claude Desktop.
+
+### Step 1 – Install Claude Desktop
+
+Download Claude Desktop:
 
 https://claude.ai/download
 
-Add the following MCP server configuration to your Claude Desktop configuration file.
+### Step 2 – Configure the MCP Server
+
+Open the Claude Desktop configuration file and add the following server configuration.
 
 ```json
 {
@@ -113,12 +141,25 @@ Add the following MCP server configuration to your Claude Desktop configuration 
 }
 ```
 
-Replace the Python executable path and the `server.py` path with the locations on your own machine.
+Replace:
 
-Restart Claude Desktop after saving the configuration.
+- `<USERNAME>` with your Windows username.
+- `D:\\path\\to\\awo-mcp-demo\\server.py` with the full path to your `server.py` file.
 
----
+### Step 3 – Restart Claude Desktop
 
+Save the configuration file and restart Claude Desktop.
+
+The MCP server should appear under **Settings → Developer → Local MCP Servers**.
+
+Once connected, Claude can automatically use the available MCP tools.
+
+Example questions:
+
+- How many AWO facilities are in Berlin?
+- Show me all AWO facilities in Berlin.
+- Find facilities that provide elderly care.
+- 
 ## Example Questions
 
 - How many AWO facilities are in Berlin?
