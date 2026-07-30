@@ -42,13 +42,22 @@ Existing AWO Pipeline
 ## Features
 
 - MCP server implemented with FastMCP
-- Facility search by city
-- Facility search by service
-- Facility counting
+- Implemented Tools
+
+Three core tools were implemented to demonstrate the server's querying capabilities:
+
+  - `count_facilities(city)`: Returns the total number of facilities in a specified city.
+  - `search_facilities(city)`: Returns a detailed list of facilities located in a given city.
+  - `find_facilities_by_service(service)`: Returns a list of facilities that offer a specific service.
+
 - Claude Desktop integration
 - Interactive Python client for testing
 
+
+
 ---
+
+
 
 ## Installation
 
