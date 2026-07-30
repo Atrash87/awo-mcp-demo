@@ -1,0 +1,6 @@
+name,city,postcode,phone,email,website,service
+AWO Kita Mitte,Berlin,10115,30123456,mitte@awo.de,https://awo-mitte.de,Childcare
+AWO Senioren Berlin,Berlin,10117,30987654,,https://awo-senioren.de,"Elderly Care"
+AWO Jugend Hamburg,Hamburg,20095,,hamburg@awo.de,https://awo-hamburg.de,Youth
+AWO Familienzentrum München,Munich,80331,89123456,info@awo-muenchen.de,,Family
+AWO Pflege Dresden,Dresden,01067,,,https://awo-dresden.de,"Elderly Care"
