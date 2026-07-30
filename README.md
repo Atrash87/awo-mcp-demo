@@ -111,6 +111,30 @@ The interactive menu will appear:
 ```
 
 Choose an option and enter the requested information. The client will communicate with the MCP server and display the returned results.
+for instance:
+### Option 1 – Count Facilities
+
+Select **1** and enter a city name (e.g., `Berlin`).
+
+The client calls the MCP tool:
+
+```python
+count_facilities(city="Berlin")
+```
+
+The server searches the dataset and returns the number of matching facilities.
+
+Example:
+
+```text
+City: Berlin
+
+Result
+------
+2
+```
+
+---
 
 ---
 
