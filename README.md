@@ -59,7 +59,7 @@ Three core tools were implemented to demonstrate the server's querying capabilit
 
 
 
-## Installation
+## Step 1: Installation
 
 Clone the repository.
 
@@ -83,7 +83,7 @@ pip install -r requirements.txt
 
 ---
 
-## Running the MCP Server
+## Step 2: Running the MCP Server
 
 Open a terminal in the project directory and activate the Conda environment.
 
@@ -96,7 +96,7 @@ The server will start and wait for incoming MCP requests. This is expected behav
 
 ---
 
-## Running the Demo Client
+## Step 3a:Running the Demo Client
 
 Open a **second terminal** in the same project directory.
 
@@ -147,7 +147,7 @@ Result
 
 ---
 
-## Claude Desktop Integration
+## Step 3b: Claude Desktop Integration
 
 Instead of using the demo client, you can connect the MCP server directly to Claude Desktop.
 
@@ -157,9 +157,11 @@ Download Claude Desktop:
 
 https://claude.ai/download
 
+*Hint:* For using a MCP server in your Claude Desktop instance, no Claude subscription is required.
+
 ### Step 2 – Configure the MCP Server
 
-Open the Claude Desktop configuration file and add the following server configuration.
+Go to **Settings → Developer → Local MCP Servers → Edit Config** and this way open the Claude Desktop configuration file. Then add the following MCP server configuration:
 
 ```json
 {
@@ -174,31 +176,31 @@ Open the Claude Desktop configuration file and add the following server configur
 }
 ```
 
-Replace:
+#### Replace:
 
-- `<USERNAME>` with your Windows username.
-- `D:\\path\\to\\awo-mcp-demo\\server.py` with the full path to your `server.py` file.
+- `command` – the executable to launch: The code snippet shows the example when pointing to a Conda Python executable on a Windows system. Here another example using pyenv virtualenvon a Mac system: `"/Users/<USERNAME>/.pyenv/versions/awo-mcp-demo/bin/python"`.
+- `args` - arguments passed to it: The code snippet shows the example when pointing to the `server.py` file path on a Windows system. Here another example pointing to the full path on a Mac system: `"/Users/<USERNAME>/Documents/code/GitHub/awo-mcp-demo/server.py"`
 
 ### Step 3 – Restart Claude Desktop
 
 Save the configuration file and restart Claude Desktop.
 
-The MCP server should appear under **Settings → Developer → Local MCP Servers**.
+The MCP server should now appear under **Settings → Developer → Local MCP Servers**.
 
-Once connected, Claude can automatically use the available MCP tools.
+Once connected, Claude can automatically use the available MCP server as a tool.
 
-Example questions:
-
-- How many AWO facilities are in Berlin?
-- Show me all AWO facilities in Berlin.
-- Find facilities that provide elderly care.
-- 
 ## Example Questions
 
 - How many AWO facilities are in Berlin?
 - Show me all AWO facilities in Berlin.
 - Find facilities that provide elderly care.
 - Find childcare facilities.
+
+## Demo with Claude Desktop
+
+Here a video of the demo with Claude Desktop:
+
+![AWO MCP Demo with Claude Desktop](assets/awo_mcp_claude_demo.gif)
 
 ---
 
